@@ -14,4 +14,4 @@ Once the container is running, you can access the jupyter notebook at http://loc
 The notebook with the code is available at http://localhost:8888/tree/jupyter/notebooks/LTI.ipynb.
 
 
-Once the container is running, you can access the platform at http://localhost:5003.
+Once the container is running, the platform will be running at http://localhost:5003.
