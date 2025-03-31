@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ course.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/assets/ltipoc.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <img src="/assets/ltipoc.png">{{ course.context['title'] }}
+            <a class="btn btn-outline-secondary" href="/course/{{course.id}}/gradebook">gradebook</a>
+        </h1>
+        <!-- Content here -->
+        <div class="row">
+            <h2>Week 1</h2>
+        </div>
+        {% for rl in course.links %}
+        <div class="row">
+            {{ rl.label }} &nbsp;<small class="text-muted">{{rl.id}}</small>
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+
+</html>

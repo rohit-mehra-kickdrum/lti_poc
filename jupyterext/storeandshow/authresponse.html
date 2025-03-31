@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+        function clipboard(id) {
+          var copyText = document.getElementById(id);
+          copyText.select();
+          document.execCommand("copy");
+        }
+        </script>
+    </head>
+    <body>
+        <h3>Authentication response</h3>
+        <p>
+            Here is Authentication response from the Learning Platform.
+            You will need to verify the <code>state</code> is the same
+            as the one that was sent, that the<code>id_token</code> 
+            can be verified with one of the platformś public keys,
+            and finally that the <code>nonce</code> in the id_token
+            is also the one you sent.
+        </p>
+        <h4>state <button onclick="clipboard('state')">copy</button></h4>
+        <textarea id='state'>{{ state }}</textarea>
+        <h4>id_token <button onclick="clipboard('id_token')">copy</button></h4>
+        <textarea id='id_token'>{{ id_token }}</textarea>
+    </body>
+</html>
